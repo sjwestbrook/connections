@@ -1,0 +1,118 @@
+/*
+--available classes
+.title
+	.title#font-title
+.wrapper
+	.wrapper > div
+	.wrapper #side-menu
+	.wrapper #side-menu .active
+	.wrapper #side-menu > div
+	.wrapper #side-menu > div:hover
+	.wrapper #side-menu > div:last-child
+	.wrapper .l-container
+	.wrapper .side-menu-box
+.www-checks
+.l-hover-white
+.l-btn
+	.l-btn:hover
+	.l-btn:focus
+.l-btn-light
+	.l-btn-light:hover
+	.l-btn-light:focus
+	.l-btn-light:active
+.l-btn-dark
+	.l-btn-dark:hover
+	.l-btn-dark:focus
+	.l-btn-dark:active
+.l-btn-main
+	.l-btn-main:focus
+	.l-btn-main:hover
+	.l-btn-main:active
+.l-btn-success
+	.l-btn-success:focus
+	.l-btn-success:hover
+	.l-btn-success:active
+.l-btn-danger
+	.l-btn-danger:focus
+	.l-btn-danger:hover
+	.l-btn-danger:active
+.l-form 
+	.l-form :first-child
+	.l-form input
+	.l-form button
+.l-input-mixin
+	.l-input-mixin:focus
+.l-header
+	.l-header img
+	.l-header.fixed
+.l-container
+	(media query for smaller screens)
+.l-msg
+	.l-msg i
+		.l-msg i:hover
+.l-msg-dark
+	.l-msg-dark i
+		.l-msg-dark i:hover
+.l-msg-success
+	.l-msg-success i
+		.l-msg-success i:hover
+.l-msg-main
+	.l-msg-main i
+		.l-msg-main i:hover
+.l-msg-danger
+	.l-msg-danger i
+		.l-msg-danger i:hover
+.l-header-separated
+	.l-header-separated div
+	.l-header-separated .l-left-box
+		.l-header-separated .l-left-box div
+	.l-header-separated .l-right-box
+		.l-header-separated .l-right-box div
+		.l-header-separated .l-right-box div:hover
+.l-header-logo-centered
+	.l-header-logo-centered div
+		.l-header-logo-centered div:hover
+		.l-header-logo-centered div:nth-child(3)
+
+--element selectors
+hr
+footer
+h1
+h2
+h3
+h4
+h5
+h6
+p
+button
+	button:hover
+	button:focus
+	button:active
+input
+	input[type="text"]
+		input[type="text"]:focus
+	input[type="password"]
+		input[type="password"]:focus
+	input[type="checkbox"]
+		input[type="checkbox"] .l-chk-lbl
+		input[type="checkbox"] .l-chk-lbl:before
+		input[type="checkbox"]:checked .l-chk-lbl:before
+	input[type="radio"]
+	input[type="radio"] .l-rdo-lbl
+	input[type="radio"] .l-rdo-lbl:before
+	input[type="radio"]:checked .l-rdo-lbl:before
+textarea
+	textarea:focus
+a
+	a:hover
+pre
+	pre.override-pre
+	pre.override-pre .hljs-title
+select
+	select:focus
+option
+
+other styling
+input placeholder (for various browsers)
+
+*/

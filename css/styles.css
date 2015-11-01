@@ -1,0 +1,64 @@
+input.noEdit {
+	border: none;
+	background-color: transparent;
+	width: 20%;
+}
+
+#myModalMask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(0,0,0,.5);
+}
+
+#myModal {
+	position: fixed;
+	top:10%;
+	width: 50%;
+	height: 50%;
+	margin: 0 auto;
+	overflow: auto;
+	z-index: 2;
+	padding: 20px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.closeBtn:before {
+	content: 'X';
+	font-size: 1em;
+	padding: 5px;
+	height: 30px;
+	width: 30px;
+	color: black;
+	border: 0px;
+	border-radius: 30px;
+	background-color: red;
+	
+}
+
+.friendList {
+	margin: 10px;
+}
+
+.friend::before {
+	content: '+';
+	font-size: 1em;
+	font-weight: bolder;
+	padding: 2px;
+	height: 20px;
+	width: 20px;
+	border: 1px solid green;
+	background-color: green;
+	color: black;
+	border-radius: 20px;
+}
+
+.secondConnection {
+	position: relative;
+	left: 20px;
+}
