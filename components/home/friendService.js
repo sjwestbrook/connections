@@ -8,7 +8,6 @@ app.service('friendService', function ($http, $q) {
 		var index = 0;
 
 		function getNextFriend() {
-			console.log(friends[index])
 			if (friends[index]) {
 				$http.get('http://localhost:8081/api/getFriendsFriends/' + friends[index]._id + '/' + profile._id)
 					.then(function (friendResponse) {
@@ -23,7 +22,6 @@ app.service('friendService', function ($http, $q) {
 					})
 
 			} else {
-				console.log(profile);
 				return dfd.resolve(profile);
 			}
 		}
@@ -56,7 +54,6 @@ app.service('friendService', function ($http, $q) {
 		$http.delete('http://localhost:8081/api/profiles/' + id)
 			.then(function (response) {
 				if (response.data.success) {
-					console.log(response.data.deleted);
 					dfd.resolve(response.data.deleted);
 				} else {
 					dfd.reject(response.data.message);
@@ -77,7 +74,6 @@ app.service('friendService', function ($http, $q) {
 		})
 			.then(function (response) {
 				if (response.data.success) {
-					console.log(response.data.friends);
 					dfd.resolve(response.data.friends);
 				}
 			})
@@ -121,7 +117,6 @@ app.service('friendService', function ($http, $q) {
 		})
 			.then(function (response) {
 				if (response.data.success) {
-					console.log(response.data);
 					if (response.data.profile.friends) {
 						var profile = response.data.profile
 						findFriendsFriends(profile, dfd);

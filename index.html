@@ -2,6 +2,8 @@
 <html lang="en" ng-app="app">
 
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+	crossorigin="anonymous">
 	<link rel="stylesheet" href="css/myCss.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<meta charset="UTF-8">
@@ -11,52 +13,63 @@
 <body ng-controller="HomeCtrl">
 	<div class="l-header">
 		<h1>{{myProfile.name || 'Your Name'}}</h1>
-	</div>
-	<div>
-		<button class="l-btn l-btn-main" ng-click="toggleEdit()">Editing : {{editing}}</button>
+		<button class="btn btn-info" ng-if="myProfile.name" ng-click="logout()"> Logout </button>
 	</div>
 
-	<div ng-class="{'l-form': editing}">
-		<label for="name"> Name: </label>
-		<input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="name" type="text" placeholder="Your Name" ng-model="myProfile.name">
-		<br />
-		<label for="likes"> Likes: </label>
-		<input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="likes" type="text" placeholder="Likes" ng-model="myProfile.likes">
-		<br />
-		<label for="favColor"> Favorite Color: </label>
-		<input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="favColor" type="text" placeholder="Favorite Color" ng-model="myProfile.favColor">
-		<br />
-		<button class="l-btn l-btn-success" ng-click="saveProfile()">Save Profile</button>
-		<button class="l-btn l-btn-danger" ng-click="deleteProfile()">Delete Profile</button>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div ng-class="{'form-group': editing}">
+					<label for="name"> Name: </label>
+					<input ng-disabled="!editing" ng-class="{noEdit: !editing, 'form-control': editing}" id="name" type="text" placeholder="Your Name"
+					ng-model="myProfile.name">
+					<br />
+					<label for="likes"> Likes: </label>
+					<input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="likes" type="text" placeholder="Likes" ng-model="myProfile.likes">
+					<br />
+					<label for="favColor"> Favorite Color: </label>
+					<input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="favColor" type="text" placeholder="Favorite Color" ng-model="myProfile.favColor">
+					<br />
+					<button ng-if="!editing" class="btn btn-primary" ng-click="toggleEdit()">Create or sign in to profile</button>
+					<button ng-if="editing" class="btn btn-success" ng-click="saveProfile()">Save Profile / Sign in</button>
+					<button ng-if="myProfile.name" class="btn btn-danger" ng-click="deleteProfile()">Delete Profile</button>
 
-	</div>
-	<div class="l-container">
-		<h2>Friends</h2>
-		<input type="text" placeholder="find friends" ng-model="friendSearch">
-		<button class="l-btn l-btn-main" ng-click="searchFriends(friendSearch, myProfile._id)">Go</button>
-	<div class="friendList" ng-repeat="friend in myProfile.friends">
-		<span ng-click="deleteFriend(friend._id)" class="closeBtn"></span>
-		{{friend.name}}
-		<br />
-		<div class="secondConnection friendList" ng-repeat="secondConnection in friend.friends">
-			{{secondConnection.name}}
+				</div>
+			</div>
+
+			<div class="col-md-6">
+
+				<h2>Friends</h2>
+				<input type="text" placeholder="find friends" ng-model="friendSearch" ng-KeyUp="handleEnterOnSearchInput($event)">
+				<button class="btn btn-success" ng-click="searchFriends(friendSearch, myProfile._id)">Go</button>
+				<div class="well">
+					<div class="friendList" ng-repeat="friend in myProfile.friends">
+						<span ng-click="deleteFriend(friend._id)" class="closeBtn"></span> {{friend.name}}
+						<br />
+						<div class="secondConnection friendList" ng-repeat="secondConnection in friend.friends">
+							{{secondConnection.name}}
+						</div>
+					</div>
+
+				</div>
+			</div>
+
 		</div>
 	</div>
-	
+	<div class="container">
+
 	</div>
-	
+
 	<div ng-if="potentialFriends.length" id="myModalMask">
 		<div id="myModal">
 			<div>
 				<div class="modalTitle">
-				<span ng-click="closeModal()" class="closeBtn"></span>
-					Add Friends
-					</div>
-					<br />
+					<span ng-click="closeModal()" class="closeBtn"></span> Add Friends
+				</div>
+				<br />
 				<div class="friendList" ng-repeat="potentialFriend in potentialFriends">
-					<span class="friend" ng-click="addFriend(potentialFriend)"></span>
-					{{potentialFriend.name}}
-					</div>
+					<span class="friend" ng-click="addFriend(potentialFriend)"></span> {{potentialFriend.name}}
+				</div>
 			</div>
 		</div>
 	</div>

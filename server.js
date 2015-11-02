@@ -18,7 +18,6 @@ var User = require('./api/UserModel.js')
 // })
 
 app.post('/api/profiles', function (req, res) {
-	console.log(req.body)
 	if (!req.body.name) {
 		res.json({ success: false, message: 'Name is required' })
 	} else if (req.body._id) {
@@ -48,7 +47,7 @@ app.post('/api/profiles', function (req, res) {
 				}
 			})
 	} else {
-		console.log('no id, looking for name');
+		//no id, looking for name
 		User.findOne({ name: req.body.name })
 			.populate('friends', 'name')
 			.exec(function (err, results) {
@@ -107,7 +106,6 @@ app.delete('/api/profiles/:id', function (req, res) {
 })
 
 app.post('/api/searchFriends', function (req, res) {
-	console.log(req.body._id)
 	var re = new RegExp(req.body.query, 'i');
 	
 	//find current User (for friends)
@@ -186,7 +184,6 @@ app.get('/api/getFriendsFriends/:id/:myId', function (req, res) {
 				console.log(err)
 				return res.json({ success: false, message: 'Could not find friend\'s friends' });
 			} else {
-				console.log('myId', myId)
 				var friends = _.map(results.friends, function (item) {
 					item.id = item._id
 					return item;
@@ -212,7 +209,6 @@ app.put('/api/deleteFriend', function (req, res) {
 			if (friends.indexOf(deleteId) !== -1) {
 				friends.splice(friends.indexOf(deleteId), 1);
 				results.save(function (err, updatedProfile) {
-					console.log(updatedProfile);
 					if (err) {
 						console.log(err)
 						return res.json({ success: false, message: 'Error saving user' });
