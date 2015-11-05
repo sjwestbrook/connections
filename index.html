@@ -2,8 +2,10 @@
 <html lang="en" ng-app="app">
 
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/myCss.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles2.css">
 	<meta charset="UTF-8">
 	<title>DevMtin</title>
 </head>
@@ -17,34 +19,33 @@
 	</div>
 
 	<div ng-class="{'l-form': editing}">
-		<label for="name"> Name: </label>
+		<!-- <label for="name"> Name: </label> -->
 		<input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="name" type="text" placeholder="Your Name" ng-model="myProfile.name">
 		<br />
-		<label for="likes"> Likes: </label>
+		<!-- <label for="likes"> Likes: </label> -->
 		<input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="likes" type="text" placeholder="Likes" ng-model="myProfile.likes">
 		<br />
-		<label for="favColor"> Favorite Color: </label>
+		<!-- <label for="favColor"> Favorite Color: </label> -->
 		<input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="favColor" type="text" placeholder="Favorite Color" ng-model="myProfile.favColor">
 		<br />
 		<button class="l-btn l-btn-success" ng-click="saveProfile()">Save Profile</button>
 		<button class="l-btn l-btn-danger" ng-click="deleteProfile()">Delete Profile</button>
-
 	</div>
+
 	<div class="l-container">
 		<h2>Friends</h2>
 		<input type="text" placeholder="find friends" ng-model="friendSearch">
 		<button class="l-btn l-btn-main" ng-click="searchFriends(friendSearch, myProfile._id)">Go</button>
-	<div class="friendList" ng-repeat="friend in myProfile.friends">
-		<span ng-click="deleteFriend(friend._id)" class="closeBtn"></span>
-		{{friend.name}}
-		<br />
-		<div class="secondConnection friendList" ng-repeat="secondConnection in friend.friends">
-			{{secondConnection.name}}
+		<div class="friendList" ng-repeat="friend in myProfile.friends">
+			<span ng-click="deleteFriend(friend._id)" class="closeBtn"></span>
+			{{friend.name}}
+			<br />
+			<div class="secondConnection friendList" ng-repeat="secondConnection in friend.friends">
+				{{secondConnection.name}}
+			</div>
 		</div>
 	</div>
-	
-	</div>
-	
+
 	<div ng-if="potentialFriends.length" id="myModalMask">
 		<div id="myModal">
 			<div>
@@ -60,6 +61,7 @@
 			</div>
 		</div>
 	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	<script src="app.js"></script>
 	<script src="components/home/homeCtrl.js"></script>

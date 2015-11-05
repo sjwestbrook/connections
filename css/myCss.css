@@ -221,13 +221,13 @@ button:active {
 }
 .l-btn-main {
   box-sizing: border-box;
-  background-color: #ffffff;
+/*  background-color: #ffffff;*/
   padding: 11px 17px;
   border: none;
   border-radius: 2px;
-  background-color: #008cba;
+  background-color: #560098;
   color: #fff;
-  border: 1px solid #008cba;
+  border: 1px solid #560098;
 }
 .l-btn-main:focus {
   outline: none;
@@ -240,13 +240,13 @@ button:active {
 }
 .l-btn-success {
   box-sizing: border-box;
-  background-color: #ffffff;
+/*  background-color: #ffffff;*/
   padding: 11px 17px;
   border: none;
   border-radius: 2px;
   color: #fff;
-  background-color: #3bd57d;
-  border: 1px solid #3bd57d;
+  background-color: #42d209;
+  border: 1px solid #42d209;
 }
 .l-btn-success:focus {
   outline: none;
@@ -259,13 +259,13 @@ button:active {
 }
 .l-btn-danger {
   box-sizing: border-box;
-  background-color: #ffffff;
+/*  background-color: #ffffff;*/
   padding: 11px 17px;
   border: none;
   border-radius: 2px;
   color: #fff;
-  background-color: #ff5f5f;
-  border: 1px solid #ff5f5f;
+  background-color: #db4800;
+  border: 1px solid #db4800;
 }
 .l-btn-danger:focus {
   outline: none;
@@ -321,8 +321,8 @@ pre.override-pre .hljs-title {
 input[type="text"],
 input[type="password"] {
   padding: 11px 17px;
-  margin: 20px 0;
-  width: 100%;
+  margin: 20px 20px;
+  width: 40%;
   border-radius: 2px;
   border: 1px solid #9a9797;
   min-height: 46px;
@@ -423,13 +423,14 @@ input[type="radio"]:checked + .l-rdo-lbl:before {
 .l-header {
   width: 100%;
   height: 70px;
-  background-color: #3d3c3c;
+  background-color: #060503;
   color: #fff;
   margin-bottom: 60px;
   display: flex;
   align-items: center;
   padding: 15px 20px;
 }
+
 .l-header img {
   max-height: 100%;
 }
@@ -448,7 +449,7 @@ body {
 .l-container {
   width: 900px;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #f1f1f1;
   padding: 20px;
 }
 @media (max-width: 900px) {
