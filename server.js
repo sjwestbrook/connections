@@ -7,9 +7,11 @@ var app = express();
 var port = 8081;
 
 app.use(cors());
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
-var User = require('./api/UserModel.js')
+app.use(express.static(__dirname + '/'));
+
+var User = require('./api/UserModel.js');
 
 // app.get('/api/profiles', function (req, res) {
 // 	User.find(req.query).exec(function (err, results) {

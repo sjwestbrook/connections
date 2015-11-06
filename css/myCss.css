@@ -247,6 +247,7 @@ button:active {
   color: #fff;
   background-color: #42d209;
   border: 1px solid #42d209;
+  float: left;
 }
 .l-btn-success:focus {
   outline: none;
@@ -266,6 +267,7 @@ button:active {
   color: #fff;
   background-color: #db4800;
   border: 1px solid #db4800;
+  float: left;
 }
 .l-btn-danger:focus {
   outline: none;

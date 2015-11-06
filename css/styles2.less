@@ -1,8 +1,105 @@
-body {
-  background-color: #7d7568;
-  background-image: url(/images/motorcycle.jpg);
-  background-size: cover;
-}
+//body {
+//  background-color: #7d7568;
+//  background-image: url(/images/motorcycle.jpg);
+//  background-size: cover;
+//}
+
+
+.container {
+  background: -webkit-linear-gradient(left,  #0f182b 0%,#2a3b53 33%,#2a3b53 66%,#0f182b 100%);
+  width: 700px;
+  height: 70px;
+  display: inline-block;
+  
+  .btn {
+    position:relative;
+    margin:10px 40px;
+    float:left;
+    width:70px;
+    height:45px;
+    border:1px solid black;
+    border-radius:8px;
+    background:-webkit-linear-gradient(top, #2c354e 0%,#576a97 100%);
+    z-index:2;      
+  }  // end btn  
+  
+  .btn-left {
+    box-shadow:-2px -2px 9px rgba(0, 0, 0, 0.7), 
+           -4px -4px 20px rgba(0, 0, 0, 0.4);
+    
+    .fa-plus {
+        right: 3px;
+        text-shadow: 1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
+      }
+  }
+
+  .btn-right {
+    box-shadow:2px -2px 9px rgba(0, 0, 0, 0.7), 
+           4px -4px 20px rgba(0, 0, 0, 0.4);
+    
+    .fa-times {
+      right: 8px;
+      text-shadow: -1px -1px 0px rgba(167, 221, 255, .8),1px 1px 2px black;
+    }
+  }
+
+  .btn::before {
+    content:"";
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    border-top:1px solid #3E4970;
+    border-bottom:1px solid #a7ddff;
+    border-radius:8px;
+    z-index:3;
+  }
+
+  .btn-left::before {
+    border-left:1px solid #3E4970;
+    border-right:1px solid #a7ddff;
+  }
+
+  .btn-right::before {
+    border-right:1px solid #3E4970;
+    border-left:1px solid #a7ddff;
+  }
+
+  .btn::after {
+    content:"";
+    position:absolute;
+    top:1px;
+    bottom:-1px;
+    border-radius:9px;
+    z-index:1;
+  }
+
+  .btn-left::after {
+    right:-1px;
+    left:1px;
+    box-shadow:1px 1px 5px rgba(171, 255, 255, 0.8);
+  }
+
+  .btn-right::after {
+    right:1px;
+    left:-1px;
+    box-shadow:-1px 1px 5px rgba(171, 255, 255, 0.8);
+  }
+  
+   i { 
+    font-size:2em;
+    line-height:45px;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    text-align:center;
+    color:#2B344E;
+    z-index:6;   
+  } // end i
+} // end container
+
 
 div {
   .1-container {
@@ -26,4 +123,16 @@ l-container {
   letter-spacing: .2em;
   color: #f1f1f1;
   }
+}
+
+#profile {
+//  background-color: grey;
+//  background-image: url(../images/metal-plate.jpg);
+//  background-size: cover;
+//  -webkit-transform: rotate(90deg);
+//  -moz-transform: rotate(90deg);
+//  -ms-transform: rotate(90deg);
+//  -o-transform: rotate(90deg);
+//  transform: rotate(90deg);
+//  width: 700px;
 }
