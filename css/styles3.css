@@ -2,13 +2,10 @@
 .section-bg {
   width: 150px;
   height: 330px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.95);
   float: left;
   padding: 10px 30px;
   margin: 20px 0;
-}
-.box-shadow {
-  box-shadow: 10px 10px 10px #000;
 }
 /* GLOBAL STYLES */
 html {
@@ -22,7 +19,7 @@ html .ng-scope {
 body {
   background-color: #7d7568;
   background-image: url(/images/bg.jpg);
-  background-size: stretch;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   margin: 0;
@@ -35,30 +32,27 @@ hr {
   background-image: linear-gradient(to right, #cccccc, #333333, #cccccc);
 }
 button {
-  border-radius: 3px;
   font-size: 11px;
   font: sans-serif;
   margin: 10px 5px 0 0;
+  border-radius: 4px;
+  background-color: #212121;
+  background-image: linear-gradient(to right, #e8e8e8, #828282, #212121, #121212);
+  border-color: #212121;
 }
 .l-btn-main {
   width: 100px;
   height: 30px;
   display: block;
   margin: 10px auto;
-  background-color: #FF9205;
-  border-color: #FF9205;
 }
 .l-btn-success {
   width: 30px;
   height: 30px;
-  background-color: #531C9C;
-  border-color: #531C9C;
 }
 .l-btn-danger {
   width: 30px;
   height: 30px;
-  background-color: #E60108;
-  border-color: #E60108;
 }
 label {
   font-family: 'Rock Salt', cursive;
@@ -68,10 +62,10 @@ label {
 input {
   clear: both;
   width: 100%;
-  border-color: #fe9808;
+  border-color: #d3d3d3;
   border-radius: 3px;
-  margin-bottom: 10px;
-  background-color: #fe9808;
+  margin-bottom: 5px;
+  background-color: #d3d3d3;
 }
 h2 {
   font-family: 'Rock Salt', cursive;
@@ -83,7 +77,7 @@ h2 {
   font-family: 'Rock Salt', cursive;
   letter-spacing: .2em;
   font-size: 2em;
-  color: #626262;
+  color: #04cab9;
   background-color: #050102;
   padding-left: 5%;
 }
@@ -92,7 +86,8 @@ h2 {
   padding: 0;
 }
 .wrapper2 {
-  background-image: url(/images/charcoal3.jpg);
+  background-image: url(/images/charcoal-sm2.jpg);
+  background-size: cover;
   border: 4px solid #040404;
   width: 850px;
   height: 405px;
@@ -102,7 +97,7 @@ h2 {
 .wrapper {
   width: 150px;
   height: 330px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.95);
   float: left;
   padding: 10px 30px;
   margin: 20px 0;
@@ -115,7 +110,7 @@ h2 {
 .l-container {
   width: 150px;
   height: 330px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.95);
   float: left;
   padding: 10px 30px;
   margin: 20px 0;
@@ -129,7 +124,7 @@ footer {
   height: 40px;
   padding-top: 20px;
   background-color: #050102;
-  color: #0d1f8d;
+  color: #04cab9;
   font-family: 'Rock Salt', cursive;
   font-size: 10px;
   text-align: center;
