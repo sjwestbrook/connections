@@ -1,1 +1,115 @@
-.container{background:-webkit-linear-gradient(left,#0f182b 0,#2a3b53 33%,#2a3b53 66%,#0f182b 100%);width:700px;height:70px;display:inline-block}.container .btn{position:relative;margin:10px 40px;float:left;width:70px;height:45px;border:1px solid #000;border-radius:8px;background:-webkit-linear-gradient(top,#2c354e 0,#576a97 100%);z-index:2}.container .btn-left{box-shadow:-2px -2px 9px rgba(0,0,0,.7),-4px -4px 20px rgba(0,0,0,.4)}.container .btn-left .fa-plus{right:3px;text-shadow:1px -1px 0 rgba(167,221,255,.8),1px 1px 2px #000}.container .btn-right{box-shadow:2px -2px 9px rgba(0,0,0,.7),4px -4px 20px rgba(0,0,0,.4)}.container .btn-right .fa-times{right:8px;text-shadow:-1px -1px 0 rgba(167,221,255,.8),1px 1px 2px #000}.container .btn::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;border-top:1px solid #3E4970;border-bottom:1px solid #a7ddff;border-radius:8px;z-index:3}.container .btn-left::before{border-left:1px solid #3E4970;border-right:1px solid #a7ddff}.container .btn-right::before{border-right:1px solid #3E4970;border-left:1px solid #a7ddff}.container .btn::after{content:"";position:absolute;top:1px;bottom:-1px;border-radius:9px;z-index:1}.container .btn-left::after{right:-1px;left:1px;box-shadow:1px 1px 5px rgba(171,255,255,.8)}.container .btn-right::after{right:1px;left:-1px;box-shadow:-1px 1px 5px rgba(171,255,255,.8)}.container i{font-size:2em;line-height:45px;position:absolute;top:0;left:0;bottom:0;text-align:center;color:#2B344E;z-index:6}div .1-container{background-color:#00f}.l-header h1{font-family:'Rock Salt',cursive;letter-spacing:.2em;font-size:2.3em;color:#f1f1f1}l-container h2{font-family:'Rock Salt',cursive;letter-spacing:.2em;color:#f1f1f1}
+/* VARIABLES, MIXINS */
+.section-bg {
+  width: 150px;
+  height: 330px;
+  background-color: #050102;
+  float: left;
+  padding: 20px 50px;
+  margin: 20px 0;
+}
+.box-shadow {
+  box-shadow: 10px 10px 10px #000;
+}
+/* GLOBAL STYLES */
+html {
+  margin: 0;
+  padding: 0;
+}
+html .ng-scope {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #7d7568;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+button {
+  border-radius: 3px;
+  font-size: 11px;
+  font: sans-serif;
+  margin: 10px 5px 0 0;
+}
+.l-btn-main {
+  width: 100px;
+  height: 30px;
+  display: block;
+  margin: 10px auto;
+}
+.l-btn-success {
+  width: 30px;
+  height: 30px;
+}
+.l-btn-danger {
+  width: 30px;
+  height: 30px;
+}
+.l-btn-light {
+  width: 100px;
+  height: 30px;
+}
+label {
+  font-family: 'Rock Salt', cursive;
+  font-size: 12px;
+  float: left;
+}
+input {
+  clear: both;
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+h2 {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: .2em;
+  color: #f1f1f1;
+  margin: 0 20px;
+}
+.l-header h1 {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: .2em;
+  font-size: 2em;
+  color: #f1f1f1;
+  background-color: #050102;
+  padding-left: 5%;
+}
+.l-header h1 .ng-binding {
+  margin: 0;
+  padding: 0;
+}
+.wrapper2 {
+  background-image: url(/images/charcoal2.jpg);
+  width: 850px;
+  height: 420px;
+  margin: 0 auto;
+  box-shadow: 10px 10px 10px #000;
+  position: relative;
+}
+.wrapper {
+  width: 150px;
+  height: 330px;
+  background-color: #050102;
+  float: left;
+  padding: 20px 50px;
+  margin: 20px 0;
+  box-shadow: 10px 10px 10px #000;
+  clear: both;
+  color: #f1f1f1;
+  position: absolute;
+  top: 5px;
+  left: 165px;
+}
+.l-container {
+  width: 150px;
+  height: 330px;
+  background-color: #050102;
+  float: left;
+  padding: 20px 50px;
+  margin: 20px 0;
+  box-shadow: 10px 10px 10px #000;
+  color: #f1f1f1;
+  position: absolute;
+  top: 5px;
+  left: 445px;
+}

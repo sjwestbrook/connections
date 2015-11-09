@@ -1,0 +1,139 @@
+/* VARIABLES, MIXINS */
+.section-bg {
+  width: 150px;
+  height: 330px;
+  background-color: rgba(0, 0, 0, 0.85);
+  float: left;
+  padding: 10px 30px;
+  margin: 20px 0;
+}
+.box-shadow {
+  box-shadow: 10px 10px 10px #000;
+}
+/* GLOBAL STYLES */
+html {
+  margin: 0;
+  padding: 0;
+}
+html .ng-scope {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #7d7568;
+  background-image: url(/images/bg.jpg);
+  background-size: stretch;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #cccccc, #333333, #cccccc);
+}
+button {
+  border-radius: 3px;
+  font-size: 11px;
+  font: sans-serif;
+  margin: 10px 5px 0 0;
+}
+.l-btn-main {
+  width: 100px;
+  height: 30px;
+  display: block;
+  margin: 10px auto;
+  background-color: #FF9205;
+  border-color: #FF9205;
+}
+.l-btn-success {
+  width: 30px;
+  height: 30px;
+  background-color: #531C9C;
+  border-color: #531C9C;
+}
+.l-btn-danger {
+  width: 30px;
+  height: 30px;
+  background-color: #E60108;
+  border-color: #E60108;
+}
+label {
+  font-family: 'Rock Salt', cursive;
+  font-size: 12px;
+  float: left;
+}
+input {
+  clear: both;
+  width: 100%;
+  border-color: #fe9808;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: #fe9808;
+}
+h2 {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: .2em;
+  color: #04cab9;
+  margin: 0 auto;
+}
+.l-header h1 {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: .2em;
+  font-size: 2em;
+  color: #626262;
+  background-color: #050102;
+  padding-left: 5%;
+}
+.l-header h1 .ng-binding {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.wrapper2 {
+  background-image: url(/images/charcoal3.jpg);
+  border: 4px solid #040404;
+  width: 850px;
+  height: 405px;
+  margin: 0 auto;
+  position: relative;
+}
+.wrapper {
+  width: 150px;
+  height: 330px;
+  background-color: rgba(0, 0, 0, 0.85);
+  float: left;
+  padding: 10px 30px;
+  margin: 20px 0;
+  clear: both;
+  color: #f1f1f1;
+  position: absolute;
+  top: 5px;
+  left: 185px;
+}
+.l-container {
+  width: 150px;
+  height: 330px;
+  background-color: rgba(0, 0, 0, 0.85);
+  float: left;
+  padding: 10px 30px;
+  margin: 20px 0;
+  color: #f1f1f1;
+  position: absolute;
+  top: 5px;
+  left: 445px;
+}
+footer {
+  width: 100%;
+  height: 40px;
+  padding-top: 20px;
+  background-color: #050102;
+  color: #0d1f8d;
+  font-family: 'Rock Salt', cursive;
+  font-size: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
