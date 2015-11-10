@@ -30,12 +30,8 @@
 <!--       <label for="favColor"> Favorite Color: </label> -->
       <input ng-disabled="!editing" ng-class="{noEdit: !editing}" id="favColor" type="text" placeholder="Favorite Color" ng-model="myProfile.favColor">
       <br />
-      <button class="l-btn l-btn-success" ng-click="saveProfile()">
-        <i class="fa fa-plus"></i>Save
-      </button>
-      <button class="l-btn l-btn-danger" ng-click="deleteProfile()">
-        <i class="fa fa-times"></i>Delete 
-      </button>
+      <button class="l-btn l-btn-success" ng-click="saveProfile()">Save</button>
+      <button class="l-btn l-btn-danger" ng-click="deleteProfile()">Delete</button>
     </div>
   </div> <!-- end wrapper -->
 
@@ -60,7 +56,7 @@
 				<div class="modalTitle">
 				<span ng-click="closeModal()" class="closeBtn"></span>
 					Add Friends
-					</div>
+				</div>
 					<br />
 				<div class="friendList" ng-repeat="potentialFriend in potentialFriends">
 					<span class="friend" ng-click="addFriend(potentialFriend)"></span>

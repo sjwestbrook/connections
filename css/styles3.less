@@ -1,6 +1,7 @@
 /* VARIABLES, MIXINS */
 
 @bgcolor: #fffcf9;
+@bgcolor2: #00697C;
 @color1: #212121;
 @color2: #fffcf9;
 @inputbg: #FFFFDF;
@@ -70,7 +71,8 @@ input {
   border: 0;
   margin-bottom: 5px;
   color: @color1;
-  background-color: @inputbg; 
+  background-color: @inputbg;
+  padding-left: 2%;
 }
 
 input[type="text"]::-webkit-input-placeholder {
@@ -119,7 +121,7 @@ h2 {
 // CREATE PROFILE
 .wrapper {
   color: @color1;
-  padding-top: 20%;
+  padding-top: 8%;
   padding-left: 25%;
   width: 28%;
   float: left;
@@ -127,13 +129,65 @@ h2 {
   
 // FRIENDS
 .l-container {
-  padding-top: 20%;
-  padding-left: 2%;
+  padding-top: 2%;
+  padding-left: 25%;
   color: @color1;
   width: 28%;
   float: left;
 }
 
+// FRIEND MODAL
+
+#myModalMask {
+  width: 200px;
+  height: 380px;
+//  background-color: transparent;
+  position: relative;
+  margin-top: 8%;
+  margin-left: 50%;
+  
+  #myModal {
+    width: 190px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    
+    div {
+      width: 210px;
+      height: 340px;
+      overflow-y: scroll;
+      overflow-x:hidden;
+//      position: relative;
+      
+      // fixed 
+      .modalTitle {
+        width: 240px;
+        height: 30px;
+        font-family: @font1;
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: .2em;
+        color: @color1;
+        margin: 0 auto;
+//        position: fixed;
+//        top: 0;
+//        left: 0;
+      }
+      
+      .friendList {
+        width: 240px;
+        height: 20px;
+        color: @color2;
+        background-color: rgba(2, 137, 141, 0.5);
+        font-family: @font1;
+        font-size: 0.8em;
+        font-weight: 600;
+        padding: 3px 0 0 20px;
+      }        
+    }
+  }
+}
 
 // MEDIA QUERIES
 
