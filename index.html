@@ -41,7 +41,8 @@
   <div class="l-container">
     <h2>Friends</h2>
 <!--    <label> Find Friends: </label> -->
-    <input type="text" placeholder="Find Friends" ng-model="friendSearch">       <button class="l-btn l-btn-main" ng-click="searchFriends(friendSearch, myProfile._id)">Go</button>
+    <button class="l-btn l-btn-main" ng-click="searchFriends(friendSearch, myProfile._id)">Go</button>
+    <input type="text" placeholder="Find Friends" ng-model="friendSearch">    
     <div class="friendList" ng-repeat="friend in myProfile.friends">
       <span ng-click="deleteFriend(friend._id)" class="closeBtn"></span>
       {{friend.name}}

@@ -8,10 +8,10 @@
 
 
 /* GLOBAL STYLES */
-
-* {
-  outline: 1px dotted red;
-}
+//
+//* {
+//  outline: 1px dotted red;
+//}
 
 html {
   margin: 0;
@@ -41,12 +41,14 @@ button {
   font: @font1;
   font-size: 12px;
   font-weight: 600; 
-  border: 0;
+  border: 0;  
 } 
   
 .l-btn-main {
   width: 110px;
   height: 30px;
+  margin: 5px 0;
+  display: block;
   color: @color2;
   background-color: @color1;
 }
@@ -54,17 +56,15 @@ button {
 .l-btn-success {
   width: 50px;
   height: 30px;
-//  margin-left: 12%;
   color: @color1;
-  background-color: green;
+  background-color: #6CF9F0;
 }
 
 .l-btn-danger {
   width: 50px;
   height: 30px;
-//  margin-left: 5%;
   color: @color1;
-  background-color: red;
+  background-color: #39C6BD;
 }
 
 label {
@@ -77,27 +77,28 @@ input {
   width: 300px;
   height: 30px;
   border: 0;
-//  border-color: @inputbg;
   margin-bottom: 5px;
   color: @color1;
   background-color: @inputbg; 
-
-  input[type="text"]::-webkit-input-placeholder {
-    color: black;
-    font-family: @font1; 
-  }
-
-  input[type="password"]::-webkit-input-placeholder {
-    color: black;
-    font-family: @font1; 
-  }
 }
+
+input[type="text"]::-webkit-input-placeholder {
+  color: black;
+  font-family: @font1; 
+  padding-left: 2%;
+}
+
+input[type="password"]::-webkit-input-placeholder {
+  color: black;
+  font-family: @font1;
+  padding-left: 2%;
+}
+
 
 
 h2 {
   font-family: @font1;
   font-size: 1.5em;
-//  font-weight: bold;
   letter-spacing: .2em;
   color: @color1;
   margin: 0 auto;
@@ -109,7 +110,6 @@ h2 {
     font-family: @font1;
     letter-spacing: .2em;
     font-size: 2em;
-//    font-weight: bold;
     color: @color1;
     background-color: @bgcolor;
     padding-left: 5%;
@@ -127,18 +127,18 @@ h2 {
 // CREATE PROFILE
 .wrapper {
   color: @color1;
-//  margin-top: 200px;
-//  margin-left: 50px;
-  padding-top: 15%;
-  padding-left: 5%;
+  padding-top: 20%;
+  padding-left: 25%;
+  width: 28%;
+  float: left;
 }
   
 
 // FRIENDS
 .l-container {
-//  margin-top: 20px;
-//  margin-left: 50px;
-  padding-top: 3%;
-  padding-left: 5%;
+  padding-top: 20%;
+  padding-left: 2%;
   color: @color1;
+  width: 28%;
+  float: left;
 }
