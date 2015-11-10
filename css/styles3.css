@@ -110,9 +110,12 @@ h2 {
     padding-left: 3%;
   }
 }
-@media (max-width: 568px) and (orientation: landscape) {
+@media (max-width: 770px) and (orientation: landscape) {
   h2 {
     font-size: 1em;
+  }
+  input {
+    width: 94%;
   }
   .l-header {
     font-size: 0.6em;
