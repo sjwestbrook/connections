@@ -106,15 +106,15 @@ h2 {
 }
 #myModalMask {
   width: 200px;
-  height: 340px;
+  height: 335px;
   position: relative;
   margin-top: 8%;
   margin-left: 50%;
   overflow: hidden;
 }
 #myModalMask #myModal {
-  width: 190px;
-  height: 340px;
+  width: 200px;
+  height: 335px;
   position: absolute;
   top: 0;
   left: 10px;
@@ -123,7 +123,7 @@ h2 {
   padding-right: 25px;
 }
 #myModalMask #myModal div {
-  width: 100%;
+  width: 200px;
   height: 100%;
 }
 #myModalMask #myModal div .modalTitle {
@@ -135,6 +135,11 @@ h2 {
   letter-spacing: .2em;
   color: #212121;
   margin: 0 auto;
+}
+#myModalMask #myModal div .modalTitle span .closeBtn {
+  width: 20px;
+  height: 20px;
+  background-color: red;
 }
 #myModalMask #myModal div .friendList {
   width: 240px;
