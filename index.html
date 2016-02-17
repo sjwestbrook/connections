@@ -41,12 +41,14 @@
     <button class="l-btn l-btn-main" ng-click="searchFriends(friendSearch, myProfile._id)">Go</button>
     <input type="text" placeholder="Find Friends" ng-model="friendSearch">    
     <div class="friendList" ng-repeat="friend in myProfile.friends">
-      <span ng-click="deleteFriend(friend._id)" class="closeBtn"></span>
+      <span ng-click="deleteFriend(friend._id)" class="closeBtn">&nbsp;&nbsp;</span>
       {{friend.name}}
       <br />
+      <!--
       <div class="secondConnection friendList" ng-repeat="secondConnection in friend.friends">
         {{secondConnection.name}}
       </div>
+-->
     </div>
   </div>
   
